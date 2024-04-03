@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #cfcfcf;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.logo {
+    display: flex;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.brandName {
+    margin-left: 5px;
+}
+
+.brandName::first-letter {
+    color: #fe7f26;
+}
+
+.links ul {
+    display: flex;
+    list-style: none;
+}
+
+.links li {
+    padding-left: 50px;
+    font-size: .9rem;
+}
+
+.links a {
+    color: rgba(0, 0, 0, 0.353);
+    text-decoration: none;
+    transition: all ease .35s;
+}
+
+.blackLink {
+    color: #000;
+}
+
+.links a:hover {
+    color: #000;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart:after {
+    content: '3';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    color: white;
+    font-size: .5rem;
+    text-align: center;
+    background-color: #fe7f26;
+    top: 12px;
+    right: -5px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.zone {
+    width: 280px;
+    margin-left: 5%;
+}
+
+.foodZone {
+    display: flex;
+    flex-direction: column;
+}
+
+.foodCaption {
+    color: #00000070;
+    font-size: .8rem;
+    position: relative;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.foodCaption::before {
+    content: '';
+    width: 30px;
+    height: 1.5px;
+    background-color: #00000070;
+    position: absolute;
+    top: 9px;
+    left: -37px;
+}
+
+.foodZone div {
+    font-family: "DM Serif Display", serif;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 65px;
+}
+
+#cakeImgs {
+    height: 550px;
+    width: 550px;
+    position: relative;
+    margin-left: 135px;
+}
+
+.cake {
+    height: 550px;
+    width: 550px;
+    border-radius: 50%;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
+
+#caviar {
+    background-image: url(/project-images/caviar.jpg);
+}
+
+.animationClass {
+    animation: rotateZoom .5s normal 0s ;
+    z-index: 1;
+    display: block;
+}
+
+.forDisplay {
+    display: none;
+}
+
+#blueBerry {
+    background-image: url(/project-images/blue_berry.jpg);
+}
+
+#strawberry {
+    background-image: url(/project-images/strawberry2.jpg);
+    background-size: 102%;
+}
+#raspberries {
+    background-image: url(/project-images/raspberrie.jpg);
+}
+
+.cakeSelections {
+    width: 500px;
+    margin-left: 70px;
+    margin-right: -76px;
+}
+
+.recipeDetail {
+    height: 95px;
+    width: 700px;
+    background-color: #fff;
+    border-radius: 100px 0 0 100px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+
+.recipeDetail:hover {
+    background-color: #fe7f26;
+    color: white;
+}
+
+.recipeText {
+    width: 60%;
+    margin: auto;
+    margin-left: 30px;
+    font-size: .85rem;
+}
+
+.recipeText p {
+    font-size: .8rem;
+}
+
+.smallImg {
+    height: 69px;
+    width: 70px;
+    background-position: center;
+    background-size: 150%;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.caviar {
+    background-image: url(/project-images/caviar.jpg);
+}
+.blueBerry {
+    background-image: url(/project-images/blue_berry.jpg);
+}
+
+.strawberry {
+    background-image: url(/project-images/strawberry2.jpg);
+    background-size: 102%;
+}
+.raspberries {
+    background-image: url(/project-images/raspberrie.jpg);
+}
+
+#priceBtn {
+    background-color: #fe7f26;
+    border: none;
+    width: 180px;
+    height: 40px;
+    border-radius: 25px;
+    color: white;
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%,0);
+    cursor: pointer;
+    z-index: 3;
+}
+
+@keyframes rotateZoom {
+    0% {
+        transform: scale(0) rotate(-90deg);
+    }
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -70px;
+    }
+}
+
+.clickEffect {
+    position: relative;
+    margin-left: -70px;
+    background-color: #fe7f26;
+    color: white;
+    z-index: 2;
+    animation: slideLeft 1s normal ease;
+}
